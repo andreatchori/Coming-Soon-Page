@@ -1,0 +1,1147 @@
+/*! ------------------------------------------------
+   Project Name: ComingSoon Template
+   Version: 1.0.0
+   Author: André Atchori inspired by mixdesign
+   Author URI: https://andreatchori.com
+   ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Template Week1 Backgrounds
+    2. Fonts
+    3. Base CSS Styles
+    4. Typography
+    5. Buttons & Triggers
+    6. Forms 
+    7. Main Section
+    8. Countdown Styles
+    9. Popup Dialogs
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+/* ------------------------------------------------*/
+/* Template Week1 Backgrounds Start */
+/* ------------------------------------------------*/
+
+.fullscreen-bg {
+  background-image: url("../img/backgrounds/background.jpg");
+}
+
+.popup-image{
+  background-image: url("../img/backgrounds/background-popup.jpg");
+}
+
+/* ------------------------------------------------*/
+/* Template Week1 Backgrounds End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Fonts Start */
+/* ------------------------------------------------*/
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Poppins-Light/Poppins-Lightd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Light/Poppins-Light.woff") format("woff"), url("../fonts/Poppins-Light/Poppins-Light.ttf") format("truetype"), url("../fonts/Poppins-Light/Poppins-Light.svg#Poppins") format("svg");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Poppins-Regular/Poppins-Regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Regular/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular/Poppins-Regular.ttf") format("truetype"), url("../fonts/Poppins-Regular/Poppins-Regular.svg#Poppins") format("svg");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Poppins-Medium/Poppins-Mediumd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium/Poppins-Medium.ttf") format("truetype"), url("../fonts/Poppins-Medium/Poppins-Medium.svg#Poppins") format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular/Montserrat-Regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("truetype"), url("../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat-Medium/Montserrat-Mediumd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat-Medium/Montserrat-Medium.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: "Quentin";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Quentin/Quentind41d.eot?#iefix") format("embedded-opentype"), url("../fonts/Quentin/Quentin.woff") format("woff"), url("../fonts/Quentin/Quentin.ttf") format("truetype"), url("../fonts/Quentin/Quentin.svg#Quentin") format("svg");
+}
+
+/* ------------------------------------------------*/
+/* Fonts End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Base CSS Styles Start */
+/* ------------------------------------------------*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+input::-moz-focus-inner {
+  border: 0 !important;
+}
+
+::-moz-selection {
+  background-color: #ffffff;
+  color: #00a8ff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #ffffff;
+  color: #00a8ff;
+  text-shadow: none;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden !important;
+  font: normal 400 1.6rem/1.7 "Montserrat", sans-serif;
+  color: #444444;
+  background-image: url("../img/backgrounds/background.jpg");
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+section {
+  position: relative;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.fullheight {
+  position: static;
+  height: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .fullheight {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.fullheight-mobile {
+  position: relative;
+  height: 100%;
+  min-height: 568px;
+}
+
+.fullheight-slider {
+  position: relative;
+  height: -webkit-calc(100% - 40px);
+  height: -moz-calc(100% - 40px);
+  height: calc(100% - 40px);
+  min-height: 528px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .fullheight-slider {
+    height: 100%;
+  }
+}
+
+.fullscreen-bg {
+  position: relative;
+  height: 100%;
+  min-height: 568px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
+  background-color: #8c9a65;
+}
+
+@media only screen and (min-width: 1200px) {
+  .fullscreen-bg {
+    width: -webkit-calc(100%);
+    width: -moz-calc(100%);
+    width: calc(100%);
+  }
+}
+
+.color-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.color-layer-gradient {
+  background-color: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+#about,
+#portfolio,
+#contact {
+  display: none;
+}
+
+/* ------------------------------------------------*/
+/* Base CSS Styles End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Typography Start */
+/* ------------------------------------------------*/
+h1 {
+  font: normal 400 4.6rem/1.1 "Poppins", sans-serif;
+  color: #232323;
+  margin-top: 2rem;
+}
+
+h1 span {
+  font-style: italic;
+  font-size: 7.8rem;
+  line-height: .6;
+  font-family: "Quentin", italic;
+  color: #00a8ff;
+}
+
+h1.light {
+  color: #ffffff;
+}
+
+h1.no-color span {
+  color: #ffffff;
+}
+
+h1.large {
+  font-size: 4.6rem;
+}
+
+h1.large span {
+  font-size: 7.8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h1 span {
+    font-size: 10rem;
+  }
+  h1.large {
+    font-size: 8rem;
+  }
+  h1.large span {
+    font-size: 15rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  h1 {
+    font-size: 8rem;
+    margin-top: 0;
+  }
+  h1 span {
+    font-size: 12.5rem;
+  }
+  h1.large {
+    font-size: 11rem;
+  }
+  h1.large span {
+    font-size: 19.8rem;
+  }
+}
+
+
+.btnholder {
+  padding: 0 10%;
+  position: absolute;
+  bottom: 7rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .btnholder {
+    padding: 0;
+    position: absolute;
+    top: 3.4rem;
+    right: -15rem;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    text-align: left;
+  }
+}
+
+h2 {
+  font: normal 400 3rem/1.1 "Poppins", sans-serif;
+  color: #232323;
+}
+
+h2 span {
+  font-style: italic;
+  font-size: 5rem;
+  line-height: .6;
+  font-family: "Quentin", italic;
+  color: #00a8ff;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 4.2rem;
+  }
+  h2 span {
+    font-size: 6.6rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  h2 {
+    font-size: 6rem;
+  }
+  h2 span {
+    font-size: 9.4rem;
+  }
+}
+
+.section-title__text {
+  margin-top: 3rem;
+}
+
+h3 {
+  font: normal 500 2.4rem/1.2 "Poppins", sans-serif;
+  color: #232323;
+}
+
+h3 small {
+  display: block;
+  margin-top: .4rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #727272;
+}
+
+h4 {
+  font: normal 500 2rem/1.2 "Poppins", sans-serif;
+  color: #232323;
+  text-align: center;
+}
+
+h4 small {
+  display: block;
+  font-weight: 400;
+  margin-bottom: .4rem;
+  font-style: italic;
+  font-size: 3.2rem;
+  font-family: "Quentin", italic;
+  color: #00a8ff;
+}
+
+h4.light {
+  color: #ffffff;
+}
+
+h5 {
+  font: normal 500 1.6rem/1.2 "Poppins", sans-serif;
+  color: #232323;
+}
+
+p {
+  font: normal 400 1.6rem/1.7 "Montserrat", sans-serif;
+  color: #444444;
+}
+
+p span {
+  font-weight: 500;
+  color: #232323;
+}
+
+p.small-text {
+  font-size: 1.4rem;
+}
+
+a {
+  color: #444444;
+}
+
+blockquote {
+  display: block;
+  position: relative;
+}
+
+blockquote::after {
+  font-family: "Ionicons";
+  content: "\f347";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(35, 35, 35, 0.16);
+}
+
+blockquote p {
+  font: normal 400 2rem/1.7 "Poppins", sans-serif;
+  color: #232323;
+  padding-top: 8.4rem;
+}
+
+blockquote p span {
+  font-family: "Quentin", italic;
+  font-size: 3.8rem;
+  line-height: .6;
+  color: #00a8ff;
+}
+
+blockquote cite {
+  display: block;
+  font: normal 400 1.4rem/1.7 "Poppins", sans-serif;
+  color: #444444;
+  margin-top: 2rem;
+}
+
+blockquote cite span {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  blockquote p {
+    font-size: 2.4rem;
+  }
+}
+
+.popup-title-title {
+  font: normal 400 3rem/1.1 "Poppins", sans-serif;
+  color: #232323;
+}
+
+.popup-title-title span {
+  font-family: "Quentin", italic;
+  font-size: 5rem;
+  line-height: .6;
+  color: #00a8ff;
+}
+
+@media only screen and (min-width: 768px) {
+  .popup-title-title {
+    font-size: 4.2rem;
+  }
+  .popup-title-title span {
+    font-size: 6.6rem;
+  }
+}
+
+.popup-title-text {
+  margin: 3rem 0 3.6rem 0;
+}
+
+/* ------------------------------------------------*/
+/* Typography End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Buttons & Triggers Start */
+/* ------------------------------------------------*/
+
+.popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: scale3d(0, 0, 0);
+     -moz-transform: scale3d(0, 0, 0);
+          transform: scale3d(0, 0, 0);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  -moz-transition: transform .3s ease-in-out, -moz-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out, -moz-transform .3s ease-in-out;
+}
+
+.popup-close::before, .popup-close::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.popup-close::before {
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup-close::after {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popup-close.is-scaled-up {
+  -webkit-transform: scale3d(1, 1, 1);
+     -moz-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: 0;
+  padding: 0;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    display: inline-block;
+  }
+}
+
+.btn-light {
+  padding: 0 .6rem;
+  font: normal 500 1.8rem/1.7 "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+.btn-light:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #00a8ff;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.no-touch .btn-light:hover::after {
+  width: 0%;
+}
+
+.btn-dark {
+  padding: 0 .6rem;
+  font: normal 500 1.8rem/1.7 "Poppins", sans-serif;
+  color: #232323;
+}
+
+.btn-dark:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #00a8ff;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.no-touch .btn-dark:hover::after {
+  width: 0%;
+}
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Forms  */
+/* ------------------------------------------------*/
+.form-container {
+  position: relative;
+}
+
+.form {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form.is-hidden {
+  opacity: 0;
+}
+
+form {
+  position: relative;
+  width: 100%;
+}
+
+form input, form textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  padding: 1.2rem;
+  font: normal 400 1.4rem/1.7 "Montserrat", sans-serif;
+  -webkit-transition: border-bottom .6s;
+  -o-transition: border-bottom .6s;
+  -moz-transition: border-bottom .6s;
+  transition: border-bottom .6s;
+}
+
+form input {
+  height: 4.6rem;
+  margin: 0 0 2.4rem 0;
+}
+
+form textarea {
+  height: 12rem;
+  resize: none;
+  margin: 0 0 .8rem 0;
+}
+
+form .inputs-description {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.4rem;
+  text-align: right;
+  font: normal 400 1.2rem/1 "Montserrat", sans-serif;
+}
+
+.notify-form input {
+  margin: 0 0 .8rem 0;
+}
+
+.form-dark {
+  -moz-placeholder-color: rgba(0, 0, 0, 0.5);
+  -ms-input-placeholder-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-dark ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-dark ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-dark input:focus:required:invalid,
+.form-dark textarea:focus:required:invalid {
+  color: #232323;
+}
+
+.form-dark input:required:valid,
+.form-dark textarea:required:valid {
+  color: #232323;
+}
+
+.form-dark input, .form-dark textarea {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: #232323;
+}
+
+.form-dark input:focus, .form-dark textarea:focus {
+  border-bottom: 1px solid #00a8ff;
+}
+
+.form-dark .inputs-description {
+  color: #727272;
+}
+
+/* ------------------------------------------------*/
+/* Forms */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Main Section Styles Start */
+/* ------------------------------------------------*/
+.main-section {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-section {
+    height: 100%;
+    width: 100%;
+    min-height: 568px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .main-section {
+    min-height: 654px;
+  }
+}
+
+.main-section__logo {
+  position: absolute;
+  top: 3.4rem;
+  left: 10%;
+  z-index: 8;
+  -webkit-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.main-section__logo img {
+  width: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-section__logo {
+    position: absolute;
+    top: 3.4rem;
+    left: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-section-content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-section-intro{
+  position: relative;
+  -webkit-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-section-intro{
+    height: 100%;
+  }
+}
+
+.main-section-intro .intro-content {
+  position: relative;
+  opacity: 1;
+  padding: 180px 0;
+  background-color: #ffffff;
+}
+
+.main-section-intro .intro-content.transparent {
+  background-color: transparent;
+}
+
+.main-section-intro .intro-content.fullheight-mobile {
+  padding: 0;
+}
+
+.main-section-intro .intro-content .headline {
+  padding: 0 10%;
+}
+
+.main-section-intro .intro-content .headline.mobile-centered {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+.main-section-intro .intro-content .headline.headline-centered {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(4%,-50%);
+  width: 100%;
+  text-align: center;
+}
+
+
+.main-section-intro.fullheight-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width:100%;
+}
+
+.main-section-intro.fullheight-slider .intro-content.fullheight-mobile {
+  min-height: 528px;
+}
+
+.main-section-intro.fullheight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-section-intro .intro-content {
+    height: 100%;
+    width: 100%;
+    min-height: 568px;
+    padding: 0;
+  }
+  .main-section-intro .intro-content.fullscreen {
+    width: -webkit-calc(100% - 180px);
+    width: -moz-calc(100% - 180px);
+    width: calc(100% - 180px);
+  }
+  .main-section-intro .intro-content .headline {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100%;
+    padding: 0 7rem;
+  }
+  .main-section-intro .intro-content .headline.mobile-centered {
+    top: auto;
+    bottom: auto;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .main-section-intro .intro-content .headline.headline-bottom {
+    top: auto;
+    bottom: 8rem;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------*/
+/* Main Section Styles End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Countdown Styles Start */
+/* ------------------------------------------------*/
+.countdown {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.countdown.countdown-headline {
+  position: relative;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  margin-top: 4rem;
+}
+
+.countdown #countdown {
+  position: relative;
+  color: #ffffff;
+}
+
+.countdown .help-text {
+  display: block;
+  font: normal 500 1.2rem/1.2 "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #ffffff;
+  margin-top: .8rem;
+}
+
+.countdown.countdown-full #countdown-large {
+  font: normal 400 3.2rem/1.1 "Poppins", sans-serif;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.countdown.countdown-full .countdown-section {
+  display: inline-block;
+  margin-right: 2.4rem;
+}
+
+.countdown.countdown-full .countdown-section:last-of-type {
+  margin-right: 0;
+}
+
+.countdown.countdown-full .countdown-period {
+  display: block;
+  font: normal 300 1.2rem/1.1 "Poppins", sans-serif;
+  letter-spacing: normal;
+}
+
+.countdown.countdown-full .help-text {
+  margin: 0 0 2.4rem 0;
+}
+
+.countdown.countdown-days {
+  position: absolute;
+  bottom: auto;
+  right: auto;
+  left: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.countdown.countdown-days #countdown {
+  font: normal 400 8.6rem/1 "Poppins", sans-serif;
+  letter-spacing: normal;
+}
+
+.countdown.countdown-days .countdown-period {
+  display: none;
+}
+
+.countdown.countdown-days .help-text {
+  font: italic 400 3.6rem/1 "Quentin", italic;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .countdown.countdown-headline {
+    position: relative;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    margin-top: 6rem;
+  }
+  .countdown.countdown-days #countdown {
+    font-size: 12rem;
+  }
+  .countdown.countdown-days .help-text {
+    font-size: 4.6rem;
+  }
+  .countdown.countdown-full .countdown-section {
+    margin-right: 4rem;
+  }
+  .countdown.countdown-full #countdown-large {
+    font-size: 5rem;
+  }
+  .countdown.countdown-full .countdown-period {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .countdown .help-text {
+    font-size: 1.4rem;
+  }
+  .countdown.countdown-days #countdown {
+    font-size: 15rem;
+  }
+  .countdown.countdown-days .help-text {
+    font-size: 6rem;
+  }
+  .countdown.countdown-full .countdown-section {
+    margin-right: 6rem;
+  }
+}
+
+/* ------------------------------------------------*/
+/* Countdown Styles End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Popup Dialogs Start */
+/* ------------------------------------------------*/
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  z-index: 12;
+}
+
+.notify {
+  display: none;
+}
+
+.popup-container {
+  width: 100%;
+  height: auto;
+  padding: 3.4rem 10%;
+  background-color: transparent;
+}
+
+.popup-controls {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 40px;
+  background-color: transparent;
+}
+
+.popup__content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: auto;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-transform: translateY(50px) scale3d(1.06, 1.06, 1.06);
+     -moz-transform: translateY(50px) scale3d(1.06, 1.06, 1.06);
+          transform: translateY(50px) scale3d(1.06, 1.06, 1.06);
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  -o-transition: transform .3s, opacity .3s;
+  -moz-transition: transform .3s, opacity .3s, -moz-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s, -moz-transform .3s;
+}
+
+.popup__content .content-block {
+  padding: 6rem 10%;
+  background-color: #ffffff;
+}
+
+.popup__content .content-block:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .popup__content .content-block {
+    padding: 7rem;
+  }
+}
+.popup-image {
+  height: 100vh;
+  min-height: 480px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+          background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+  .popup-image {
+    height: 100%;
+    min-height: auto;
+  }
+}
+/* ------------------------------------------------*/
+/* Popup Dialogs End */
+/* ------------------------------------------------*/
